@@ -92,3 +92,17 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .movie-grid {
+    width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .movie-grid {
+    width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
