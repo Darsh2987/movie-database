@@ -1,5 +1,6 @@
 import React from "react";
 
+// Header component with h1 site title and search input
 const Header = (props) => {
   return (
     <header className="header">

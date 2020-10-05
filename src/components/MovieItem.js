@@ -1,7 +1,9 @@
 import React from "react";
 
+// Movie poster/image path
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
+// Function and conditional statment to apply a different class name depending on the vote average score
 const setVoteClass = (vote) => {
   if (vote >= 8) {
     return "movie-item-card-vote-green";
@@ -12,6 +14,7 @@ const setVoteClass = (vote) => {
   }
 };
 
+// Movie Item component
 const MovieItem = (props) => {
   return (
     <div className="movie-item-card">
