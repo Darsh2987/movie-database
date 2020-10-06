@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #373b69;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-weight: 400;
+}
+
+.header-search {
+  width: 250px;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.header-search:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header h1 {
+    margin-bottom: 1rem;
+  }
+}
