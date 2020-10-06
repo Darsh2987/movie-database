@@ -25,7 +25,7 @@ function App() {
 
   // Function to handle input search submit
   const handleInputSubmit = (e) => {
-    e.preventDefualt();
+    e.preventDefault();
 
     const fetchSearch = async () => {
       const response = await fetch(searchApi + searchTerm);
