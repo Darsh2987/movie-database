@@ -27,13 +27,15 @@ function App() {
   const handleInputSubmit = (e) => {
     e.preventDefault();
 
-    const fetchSearch = async () => {
-      const response = await fetch(searchApi + searchTerm);
-      const data = await response.json();
-      setMovies(data.results);
-    };
+    if (searchTerm) {
+      const fetchSearch = async () => {
+        const response = await fetch(searchApi + searchTerm);
+        const data = await response.json();
+        setMovies(data.results);
+      };
 
-    fetchSearch();
+      fetchSearch();
+    }
   };
 
   // function to handle input search search change
