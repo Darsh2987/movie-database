@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../images/no_image_placeholder.jpg";
 
 // Movie poster/image path
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
@@ -18,7 +19,7 @@ const setVoteClass = (vote) => {
 const MovieItem = (props) => {
   return (
     <div className="movie-item-card">
-      <img className="movie-item-card-poster" src={IMGPATH + props.movieItem.poster_path} alt={props.movieItem.title} />
+      <img className="movie-item-card-poster" src={props.movieItem.poster_path ? IMGPATH + props.movieItem.poster_path : image} alt={props.movieItem.title} />
       <div className="movie-item-card-info">
         <h3 className="movie-item-card-title">{props.movieItem.title}</h3>
         <span className={`movie-item-card-vote ${setVoteClass(props.movieItem.vote_average)}`}>{props.movieItem.vote_average}</span>
